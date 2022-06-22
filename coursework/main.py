@@ -1,6 +1,6 @@
 import psycopg2
 from flask import Flask
-from flask import render_template, request, redirect, abort
+from flask import render_template, request, redirect
 
 def connection(db_name, db_user, db_password, db_host, db_port):
     connection = psycopg2.connect(
