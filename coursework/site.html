@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!--suppress XmlInvalidId -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Сайт</title>
+</head>
+<body bgcolor="white">
+<h1>User list:</h1>
+<ul>
+{% for user in users %}
+    <li><a href="http://127.0.0.1:5000/users/{{ user['username'] }}">{{ user['first_name'] }} {{ user['last_name'] }}</a><br></li>
+{% endfor %}
+</ul>
+<form action="" method="post">
+    <p>
+        <label for="first_name">Name</label>
+        <input type="text" name="first_name">
+    </p>
+    <p>
+        <label for="last_name">Surname</label>
+        <input type="text" name="last_name">
+    </p>
+      <p>
+        <label for="phone_num">Phone number</label>
+        <input type="text" name="phone_num">
+    </p>
+    <p>
+        <input type="submit">
+    </p>
+</form>
+</body>
+</html>
